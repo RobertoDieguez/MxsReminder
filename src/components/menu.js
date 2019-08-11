@@ -15,8 +15,12 @@ export default function() {
     <div>
       <Navbar bg="dark" variant="dark" expand="lg">
         <Navbar.Brand>
-          <Link to="/" style={{ color: "red" }}>
-            MxsReminder
+          <Link to="/">
+            <img
+              src={require("../mxsreminderlogo.png")}
+              alt="ITSPRO"
+              style={{ width: "100px", height: "55px" }}
+            />
           </Link>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />

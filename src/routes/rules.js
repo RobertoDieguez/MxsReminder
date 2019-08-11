@@ -8,7 +8,7 @@ export default function() {
       <br />
       <Jumbotron>
         <h1>Rules and Terms</h1>
-        <p>
+        <p align="justify">
           MxsReminder has some basic rules and terms that we need to follow in
           order to have a great experience without any problems. If you see that
           someone violates one of these rules you can report them at{" "}
@@ -25,7 +25,7 @@ export default function() {
             MxsReminder is not responsible if the creator of an event does not
             show up to host the event. This is a very bad fault and you can
             report the creator of the event at <b>contact@mxsreminder.com</b>{" "}
-            with the Subject <b>REPORT</b>..
+            with the Subject <b>REPORT</b>.
           </li>
           <li>
             Remember, we're sending notifications about all events to everyone.
@@ -40,7 +40,12 @@ export default function() {
             You can report this at <b>contact@mxsreminder.com</b> with the
             Subject <b>REPORT</b>.{" "}
           </li>
-          <li>Always be nice to everyone! We don't like toxic people :)</li>
+          <li>
+            Always be nice to everyone! We don't like toxic people.{" "}
+            <span aria-label="heart" role="img">
+              💩
+            </span>
+          </li>
         </ul>
       </Jumbotron>
     </div>
