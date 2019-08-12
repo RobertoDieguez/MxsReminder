@@ -9,9 +9,9 @@ export default function() {
       <Jumbotron>
         <h1>Rules and Terms</h1>
         <p align="justify">
-          MxsReminder has some basic rules and terms that we need to follow in
-          order to have a great experience without any problems. If you see that
-          someone violates one of these rules you can report them at{" "}
+          MxsReminder has some basic rules and terms that we need to follow to
+          have a great experience without any problems. If you see that someone
+          violates one of these rules you can report them at{" "}
           <b>contact@mxsreminder.com</b> with the Subject <b>REPORT</b>.
           <br />
           <br />

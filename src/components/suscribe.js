@@ -18,13 +18,13 @@ export default function(props) {
       centered
     >
       <Modal.Header closeButton>
-        <Modal.Title id="contained-modal-title-vcenter">Suscribe</Modal.Title>
+        <Modal.Title id="contained-modal-title-vcenter">Subscribe</Modal.Title>
       </Modal.Header>
       <Modal.Body>
         <p>
           You will receive all emails about eliminations and fun races. If you
           want to stop receiving these emails please send us a message at{" "}
-          <b>contact@mxsreminder.com</b> with the subject <b>UNSUSCRIBE</b>
+          <b>contact@mxsreminder.com</b> with the subject <b>UNSUBSCRIBE</b>
         </p>
         <Form
           onSubmit={event => {
@@ -34,7 +34,9 @@ export default function(props) {
           }}
         >
           <Form.Group controlId="name">
-            <Form.Label>Your Name</Form.Label>
+            <Form.Label>
+              <b>Your Name</b>
+            </Form.Label>
             <Form.Control
               type="text"
               placeholder="Enter your name"
@@ -45,7 +47,9 @@ export default function(props) {
           </Form.Group>
 
           <Form.Group controlId="email">
-            <Form.Label>Your Email</Form.Label>
+            <Form.Label>
+              <b>Your Email</b>
+            </Form.Label>
             <Form.Control
               type="email"
               placeholder="Enter a valid email"

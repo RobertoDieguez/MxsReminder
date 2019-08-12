@@ -10,6 +10,8 @@ export default function(props) {
     name: "",
     email: "",
     server: "",
+    track: "",
+    tracklink: "",
     hour: "21:00",
     timezone: "EST",
     type: "Elimination",
@@ -40,7 +42,9 @@ export default function(props) {
           }}
         >
           <Form.Group controlId="name">
-            <Form.Label>Your Name</Form.Label>
+            <Form.Label>
+              <b>Your Name</b>
+            </Form.Label>
             <Form.Control
               type="text"
               placeholder="Enter your name"
@@ -51,7 +55,9 @@ export default function(props) {
           </Form.Group>
 
           <Form.Group controlId="email">
-            <Form.Label>Your Email</Form.Label>
+            <Form.Label>
+              <b>Your Email</b>
+            </Form.Label>
             <Form.Control
               type="email"
               placeholder="Enter a valid email"
@@ -67,7 +73,9 @@ export default function(props) {
           </Form.Group>
 
           <Form.Group controlId="server">
-            <Form.Label>Your Server</Form.Label>
+            <Form.Label>
+              <b>Your Server</b>
+            </Form.Label>
             <Form.Control
               type="text"
               placeholder="Enter a valid Mx Simulator Server"
@@ -79,8 +87,39 @@ export default function(props) {
             />
           </Form.Group>
 
+          <Form.Group controlId="server">
+            <Form.Label>
+              <b>Track</b>
+            </Form.Label>
+            <Form.Control
+              type="text"
+              placeholder="Enter the full name of the track"
+              value={data.track}
+              onChange={event =>
+                setData({ ...data, track: event.target.value })
+              }
+              required
+            />
+          </Form.Group>
+
+          <Form.Group controlId="server">
+            <Form.Label>
+              <b>Track Link</b>
+            </Form.Label>
+            <Form.Control
+              type="text"
+              placeholder="Link to download the track."
+              value={data.tracklink}
+              onChange={event =>
+                setData({ ...data, tracklink: event.target.value })
+              }
+            />
+          </Form.Group>
+
           <Form.Group>
-            <Form.Label>Hour:</Form.Label>
+            <Form.Label>
+              <b>Hour:</b>
+            </Form.Label>
             <input
               type="time"
               id="hour"
@@ -106,7 +145,9 @@ export default function(props) {
           </Form.Group>
 
           <Form.Group>
-            <Form.Label>Type:</Form.Label>
+            <Form.Label>
+              <b>Type:</b>
+            </Form.Label>
             <select
               name="type"
               style={{ marginLeft: "10px" }}
@@ -120,7 +161,9 @@ export default function(props) {
           </Form.Group>
 
           <Form.Group>
-            <Form.Label>Bikes:</Form.Label>
+            <Form.Label>
+              <b>Bikes:</b>
+            </Form.Label>
             <select
               name="bikes"
               style={{ marginLeft: "10px" }}
@@ -138,7 +181,9 @@ export default function(props) {
           </Form.Group>
 
           <Form.Group controlId="description">
-            <Form.Label>Description (Not required)</Form.Label>
+            <Form.Label>
+              <b>Description (Not required)</b>
+            </Form.Label>
             <Form.Control
               as="textarea"
               rows="3"

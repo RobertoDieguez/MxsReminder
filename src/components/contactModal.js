@@ -16,7 +16,7 @@ export default function(props) {
         </Modal.Title>
       </Modal.Header>
       <Modal.Body>
-        <p align="justify">
+        <p>
           It seems like the programmer was very lazy to create this contact
           form.{" "}
           <span aria-label="heart" role="img">

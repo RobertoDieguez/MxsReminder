@@ -50,7 +50,7 @@ export default function() {
             className="mr-sm-2"
             onClick={() => setShowSuscribe(true)}
           >
-            Suscribe
+            Subscribe
           </Button>
           <Button
             variant="outline-danger"

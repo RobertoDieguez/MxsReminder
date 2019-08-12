@@ -3,6 +3,7 @@ import Table from "react-bootstrap/Table";
 import Spinner from "react-bootstrap/Spinner";
 import { read } from "../firestore";
 import { useState, useEffect } from "react";
+import Button from "react-bootstrap/Button";
 
 export default function() {
   const [loading, setLoading] = useState(true);
@@ -29,6 +30,7 @@ export default function() {
         <tr>
           <th>EVENT TYPE</th>
           <th>SERVER</th>
+          <th>TRACK</th>
           <th>HOUR</th>
           <th>BIKES ALLOWED</th>
           <th>CREATOR</th>
@@ -40,6 +42,16 @@ export default function() {
             <tr key={id}>
               <td>{event.type}</td>
               <td>{event.server}</td>
+              <td>
+                {event.track}{" "}
+                {event.tracklink ? (
+                  <div style={{ display: "inline-block", float: "right" }}>
+                    <Button variant="danger" href={event.tracklink}>
+                      Download
+                    </Button>
+                  </div>
+                ) : null}
+              </td>
               <td>{`${event.hour} ${event.timezone}`}</td>
               <td>{event.bikes}</td>
               <td>{event.name}</td>
