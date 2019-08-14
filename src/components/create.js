@@ -3,7 +3,6 @@ import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import { useState } from "react";
-import { write } from "../firestore";
 
 export default function(props) {
   const initialData = {
@@ -37,7 +36,6 @@ export default function(props) {
         <Form
           onSubmit={event => {
             event.preventDefault();
-            write("events", data);
             setData(initialData);
           }}
         >

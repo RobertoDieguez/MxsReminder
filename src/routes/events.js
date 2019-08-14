@@ -1,7 +1,6 @@
 import React from "react";
 import Table from "react-bootstrap/Table";
 import Spinner from "react-bootstrap/Spinner";
-import { read } from "../firestore";
 import { useState, useEffect } from "react";
 import Button from "react-bootstrap/Button";
 
