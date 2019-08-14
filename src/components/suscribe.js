@@ -1,14 +1,33 @@
 import React from "react";
 import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
+import Spinner from "react-bootstrap/Spinner";
 import Form from "react-bootstrap/Form";
-import { write } from "../firestore";
+import axios from "axios";
 import { useState } from "react";
 
 export default function(props) {
   const initialData = { name: "", email: "" };
 
   const [data, setData] = useState(initialData);
+
+  const [loading, setLoading] = useState(false);
+
+  function createTempUser(event) {
+    event.preventDefault();
+    setLoading(true);
+    axios
+      .post(
+        "https://us-central1-mxsreminder-42916.cloudfunctions.net/createTempUser",
+        JSON.stringify(data)
+      )
+      .then(response => {
+        console.log(response.data);
+        setData(initialData);
+        setLoading(false);
+      })
+      .catch(error => console.log(error));
+  }
 
   return (
     <Modal
@@ -26,13 +45,7 @@ export default function(props) {
           want to stop receiving these emails please send us a message at{" "}
           <b>contact@mxsreminder.com</b> with the subject <b>UNSUBSCRIBE</b>
         </p>
-        <Form
-          onSubmit={event => {
-            event.preventDefault();
-            write("users", data);
-            setData(initialData);
-          }}
-        >
+        <Form onSubmit={createTempUser}>
           <Form.Group controlId="name">
             <Form.Label>
               <b>Your Name</b>
@@ -64,9 +77,13 @@ export default function(props) {
             </Form.Text>
           </Form.Group>
 
-          <Button variant="danger" type="submit">
-            Done
-          </Button>
+          {loading ? (
+            <Spinner animation="border" variant="danger" />
+          ) : (
+            <Button variant="danger" type="submit">
+              Done
+            </Button>
+          )}
         </Form>
       </Modal.Body>
       <Modal.Footer>

@@ -10,12 +10,15 @@ export default function() {
   const [data, setData] = useState();
 
   useEffect(() => {
-    async function readData() {
-      const response = await read("events");
-      setData(response);
+    async function getData() {
+      const response = await fetch(
+        "https://us-central1-mxsreminder-42916.cloudfunctions.net/readEvents"
+      );
+      const json = await response.json();
+      setData(json);
       setLoading(false);
     }
-    readData();
+    getData();
   }, []);
 
   return loading ? (
