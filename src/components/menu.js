@@ -26,22 +26,36 @@ export default function() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">
-            <Link to="/" style={{ color: "white", padding: "10px" }}>
-              Home
+            <Link
+              to="/"
+              style={{
+                color: "white",
+                padding: "10px",
+                fontFamily: "Viga"
+              }}
+            >
+              HOME
             </Link>
 
-            <Link to="/events" style={{ color: "white", padding: "10px" }}>
-              Events
+            <Link
+              to="/events"
+              style={{ color: "white", padding: "10px", fontFamily: "Viga" }}
+            >
+              EVENTS
             </Link>
 
-            <Link to="/rules" style={{ color: "white", padding: "10px" }}>
-              Rules
+            <Link
+              to="/rules"
+              style={{ color: "white", padding: "10px", fontFamily: "Viga" }}
+            >
+              RULES
             </Link>
           </Nav>
           <Button
             variant="danger"
             className="mr-sm-2"
             onClick={() => setShowCreate(true)}
+            style={{ fontFamily: "Viga" }}
           >
             Create Event
           </Button>
@@ -49,6 +63,7 @@ export default function() {
             variant="outline-danger"
             className="mr-sm-2"
             onClick={() => setShowSuscribe(true)}
+            style={{ fontFamily: "Viga" }}
           >
             Subscribe
           </Button>
@@ -56,6 +71,7 @@ export default function() {
             variant="outline-danger"
             className="mr-sm-2"
             href="https://discord.gg/7uHUxuh"
+            style={{ fontFamily: "Viga" }}
           >
             Discord
           </Button>

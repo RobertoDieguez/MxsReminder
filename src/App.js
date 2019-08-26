@@ -4,6 +4,7 @@ import Menu from "./components/menu";
 import Home from "./routes/home";
 import Events from "./routes/events";
 import Rules from "./routes/rules";
+import Unsubscribe from "./routes/unsubscribe";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/" exact component={Home} />
         <Route path="/events" component={Events} />
         <Route path="/rules" component={Rules} />
+        <Route path="/unsubscribe" component={Unsubscribe} />
       </Switch>
     </BrowserRouter>
   );

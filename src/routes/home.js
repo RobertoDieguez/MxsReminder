@@ -63,12 +63,13 @@ export default function() {
                   This is the beginning of a bigger project. We are working on
                   an App for Android and IOS to make it easier to create events
                   and receive notifications with your smartphone. If you want to
-                  support this project to pay the creator license to deploy the
-                  App on the PlayStore and the AppStore you can give us a humble
-                  donation with Paypal. We'll appreciate it very much.
+                  support MxsReminder to deploy our App on the PlayStore and the
+                  AppStore and finance a better server hosting to have our
+                  official Mx Simulator server you can give us a humble donation
+                  with Paypal. We'll appreciate it very much.
                 </p>
                 <br />
-                <Button variant="outline-danger">
+                <Button variant="outline-danger" style={{ fontFamily: "Viga" }}>
                   Donate with Paypal{" "}
                   <span aria-label="heart" role="img">
                     ❤
@@ -91,6 +92,7 @@ export default function() {
                 <Button
                   variant="outline-danger"
                   onClick={() => setShowModal(true)}
+                  style={{ fontFamily: "Viga" }}
                 >
                   Contact
                 </Button>
