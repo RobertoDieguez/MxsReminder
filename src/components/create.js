@@ -127,11 +127,6 @@ export default function(props) {
                 }
                 required
               />
-              <Form.Text className="text-danger">
-                {invalidEvent
-                  ? "Oops! You have already created an event today"
-                  : null}
-              </Form.Text>
             </Form.Group>
 
             <Form.Group controlId="server">
@@ -260,13 +255,20 @@ export default function(props) {
             {loading ? (
               <Spinner animation="border" variant="danger" />
             ) : (
-              <Button
-                variant="danger"
-                type="submit"
-                style={{ fontFamily: "Viga" }}
-              >
-                Create
-              </Button>
+              <Form.Group>
+                <Button
+                  variant="danger"
+                  type="submit"
+                  style={{ fontFamily: "Viga" }}
+                >
+                  Create
+                </Button>
+                <Form.Text className="text-danger">
+                  {invalidEvent
+                    ? "Oops! You have already created an event today"
+                    : null}
+                </Form.Text>
+              </Form.Group>
             )}
           </Form>
         </Modal.Body>

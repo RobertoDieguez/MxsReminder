@@ -6,12 +6,17 @@ import Jumbotron from "react-bootstrap/Jumbotron";
 import Button from "react-bootstrap/Button";
 import { useState } from "react";
 import ContactForm from "../components/contactModal";
+import Alert from "react-bootstrap/Alert";
 
 export default function() {
   const [showModal, setShowModal] = useState(false);
 
   return (
     <Container>
+      <Alert variant="danger">
+        At this moment <b>contact@mxsreminder.com</b> is not working. You can
+        contact us at <b>mxsreminder@gmail.com</b>
+      </Alert>
       <Row>
         <Col>
           <div style={{ height: "100%", display: "flex" }}>
@@ -64,12 +69,16 @@ export default function() {
                   an App for Android and IOS to make it easier to create events
                   and receive notifications with your smartphone. If you want to
                   support MxsReminder to deploy our App on the PlayStore and the
-                  AppStore and finance a better server hosting to have our
-                  official Mx Simulator server you can give us a humble donation
-                  with Paypal. We'll appreciate it very much.
+                  AppStore and finance a better hosting to have our official Mx
+                  Simulator server you can give us a humble donation with
+                  Paypal. We'll appreciate it very much!.
                 </p>
                 <br />
-                <Button variant="outline-danger" style={{ fontFamily: "Viga" }}>
+                <Button
+                  variant="outline-danger"
+                  style={{ fontFamily: "Viga" }}
+                  href="https://paypal.me/mxsreminder"
+                >
                   Donate with Paypal{" "}
                   <span aria-label="heart" role="img">
                     ❤

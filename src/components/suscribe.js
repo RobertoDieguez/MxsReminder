@@ -127,21 +127,23 @@ export default function(props) {
                 }
                 required
               />
-              <Form.Text className="text-danger">
-                {invalidEmail ? "Oops! This email was already used!" : null}
-              </Form.Text>
             </Form.Group>
 
             {loading ? (
               <Spinner animation="border" variant="danger" />
             ) : (
-              <Button
-                variant="danger"
-                type="submit"
-                style={{ fontFamily: "Viga" }}
-              >
-                Done
-              </Button>
+              <Form.Group>
+                <Button
+                  variant="danger"
+                  type="submit"
+                  style={{ fontFamily: "Viga" }}
+                >
+                  Done
+                </Button>
+                <Form.Text className="text-danger">
+                  {invalidEmail ? "Oops! This email was already used!" : null}
+                </Form.Text>
+              </Form.Group>
             )}
           </Form>
         </Modal.Body>
